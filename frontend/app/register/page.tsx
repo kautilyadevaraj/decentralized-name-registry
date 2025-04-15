@@ -30,6 +30,7 @@ import { Label } from "@/components/ui/label";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Slider } from "@/components/ui/slider";
 import { getNameRegistryContract } from "@/lib/contract";
+import { CustomLoader } from "@/components/CustomLoader";
 
 export default function RegisterPage() {
   const searchParams = useSearchParams();
@@ -63,7 +64,8 @@ export default function RegisterPage() {
       setIsAvailable(null);
     }
 
-    setIsLoading(false);
+      setIsLoading(false);
+
   };
 
   const handleSubmit = (e: React.FormEvent) => {

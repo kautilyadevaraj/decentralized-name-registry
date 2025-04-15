@@ -27,6 +27,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { ethers } from "ethers";
 import { getNameRegistryContract } from "@/lib/contract";
 import { motion } from "framer-motion";
+import { CustomLoader } from "@/components/CustomLoader";
 
 type RegisteredName = {
   id: string;
@@ -180,25 +181,7 @@ export default function ProfilePage() {
             </div>
 
             {loading ? (
-              <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-                {Array.from({ length: 3 }).map((_, i) => (
-                  <Card
-                    key={i}
-                    className="overflow-hidden border border-muted/80 bg-card/50 backdrop-blur-sm"
-                  >
-                    <CardHeader className="p-4">
-                      <Skeleton className="h-5 w-3/4" />
-                    </CardHeader>
-                    <CardContent className="p-4 pt-0">
-                      <Skeleton className="h-4 w-full mb-2" />
-                      <Skeleton className="h-4 w-2/3" />
-                    </CardContent>
-                    <CardFooter className="p-4 pt-0">
-                      <Skeleton className="h-6 w-1/3" />
-                    </CardFooter>
-                  </Card>
-                ))}
-              </div>
+              <CustomLoader message="Profile Details"/>
             ) : sortedNames.length > 0 ? (
               <motion.div
                 className="grid gap-4 md:grid-cols-2 lg:grid-cols-3"

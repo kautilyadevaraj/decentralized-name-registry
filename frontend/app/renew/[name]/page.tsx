@@ -29,6 +29,7 @@ import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Slider } from "@/components/ui/slider";
 import { getNameRegistryContract } from "@/lib/contract";
+import { CustomLoader } from "@/components/CustomLoader";
 
 type NameDetails = {
   name: string;
@@ -100,7 +101,9 @@ export default function RenewNamePage() {
         setError("Failed to load name data. Please try again.");
       }
 
-      setLoading(false);
+      setTimeout(() => {
+        setLoading(false);
+      }, 4000);
     };
 
     fetchDetails();
@@ -165,27 +168,7 @@ export default function RenewNamePage() {
   };
 
   if (loading) {
-    return (
-      <div className="container max-w-4xl py-12">
-        <div className="flex flex-col items-center space-y-8">
-          <div className="space-y-2 text-center">
-            <Skeleton className="h-8 w-64 mx-auto" />
-            <Skeleton className="h-4 w-96 mx-auto" />
-          </div>
-
-          <Card className="w-full border border-muted/80 bg-card/50 backdrop-blur-sm">
-            <CardHeader>
-              <Skeleton className="h-6 w-1/3 mb-2" />
-              <Skeleton className="h-4 w-1/2" />
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <Skeleton className="h-20 w-full" />
-              <Skeleton className="h-12 w-full" />
-            </CardContent>
-          </Card>
-        </div>
-      </div>
-    );
+    return <CustomLoader message="Renewal Details"/>;
   }
 
   if (!nameDetails) {

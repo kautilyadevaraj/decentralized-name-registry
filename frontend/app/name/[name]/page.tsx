@@ -29,6 +29,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ethers } from "ethers";
 import { getNameRegistryContract } from "@/lib/contract";
+import {CustomLoader} from "@/components/CustomLoader";
 
 type NameDetails = {
   name: string;
@@ -114,25 +115,7 @@ export default function NameDetailsPage() {
   };
 
   if (loading) {
-    return (
-      <div className="container py-12">
-        <div className="max-w-3xl mx-auto">
-          <Skeleton className="h-8 w-2/3 mb-4" />
-          <Skeleton className="h-4 w-1/2 mb-8" />
-
-          <Card className="border border-muted/80 bg-card/50 backdrop-blur-sm">
-            <CardHeader>
-              <Skeleton className="h-6 w-1/3 mb-2" />
-              <Skeleton className="h-4 w-1/2" />
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <Skeleton className="h-20 w-full" />
-              <Skeleton className="h-12 w-full" />
-            </CardContent>
-          </Card>
-        </div>
-      </div>
-    );
+    return <CustomLoader message="Name Details"/>
   }
 
   if (!nameDetails) {
