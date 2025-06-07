@@ -7,7 +7,6 @@ import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { NameSearchForm } from "@/components/name-search-form"
-import { FeaturedNames } from "@/components/featured-names"
 import { HeroAnimation } from "@/components/hero-animation"
 
 export default function Home() {
@@ -39,7 +38,6 @@ export default function Home() {
                     Learn More
                     <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </Link>
-                  
                 </div>
               </div>
               <div className="flex items-center justify-center">
@@ -127,7 +125,7 @@ export default function Home() {
                         Try it now
                       </h3>
                       <p className="text-sm text-muted-foreground">
-                        Search for a name to see if it's available for
+                        Search for a name to see if it&apos;s available for
                         registration.
                       </p>
                     </div>
@@ -182,10 +180,8 @@ export default function Home() {
         <div className="container flex flex-col items-center justify-between gap-4 md:h-24 md:flex-row">
           <p className="text-center text-sm leading-loose text-muted-foreground md:text-left">
             © 2025{" "}
-            <span className="gradient-text font-medium">
-              BlockRegistry
-            </span>
-            . All rights reserved.
+            <span className="gradient-text font-medium">BlockRegistry</span>.
+            All rights reserved.
           </p>
           <div className="flex items-center gap-4">
             <Link

@@ -27,7 +27,6 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
-import { Skeleton } from "@/components/ui/skeleton";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { getNameRegistryContract } from "@/lib/contract";
@@ -124,6 +123,7 @@ export default function TransferNamePage() {
         setIsValidAddress(false);
       }
     } catch (err) {
+      console.log("Invalid address format:", err);
       setIsValidAddress(false);
     }
   }, [recipientAddress]);

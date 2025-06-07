@@ -23,7 +23,6 @@ import {
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
-import { Skeleton } from "@/components/ui/skeleton";
 import { ethers } from "ethers";
 import { getNameRegistryContract } from "@/lib/contract";
 import { motion } from "framer-motion";
@@ -181,7 +180,7 @@ export default function ProfilePage() {
             </div>
 
             {loading ? (
-              <CustomLoader message="Profile Details"/>
+              <CustomLoader message="Profile Details" />
             ) : sortedNames.length > 0 ? (
               <motion.div
                 className="grid gap-4 md:grid-cols-2 lg:grid-cols-3"
@@ -237,7 +236,10 @@ export default function ProfilePage() {
                               size="sm"
                               className="border-teal/20 hover:bg-teal/10 hover:text-teal transition-colors"
                             >
-                              <Link href={`/renew/${name.name}`} className="flex items-center">
+                              <Link
+                                href={`/renew/${name.name}`}
+                                className="flex items-center"
+                              >
                                 <RefreshCw className="mr-1 h-3 w-3" />
                                 Renew
                               </Link>
@@ -255,7 +257,7 @@ export default function ProfilePage() {
                   <Shield className="h-12 w-12 text-muted-foreground opacity-50" />
                 </div>
                 <p className="text-muted-foreground mb-4">
-                  You don't have any registered names yet.
+                  You don&apos;t have any registered names yet.
                 </p>
                 <Button
                   asChild
@@ -275,9 +277,7 @@ export default function ProfilePage() {
                 <CardTitle className="gradient-text">
                   Account Settings
                 </CardTitle>
-                <CardDescription>
-                  Manage your connected wallets
-                </CardDescription>
+                <CardDescription>Manage your connected wallets</CardDescription>
               </CardHeader>
               <CardContent className="space-y-6">
                 <div className="space-y-3">
@@ -307,10 +307,7 @@ export default function ProfilePage() {
                     </Badge>
                   </div>
                 </div>
-
-                
               </CardContent>
-              
             </Card>
           </TabsContent>
         </Tabs>

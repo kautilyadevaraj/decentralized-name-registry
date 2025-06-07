@@ -26,7 +26,6 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
-import { Skeleton } from "@/components/ui/skeleton";
 import { Slider } from "@/components/ui/slider";
 import { getNameRegistryContract } from "@/lib/contract";
 import { CustomLoader } from "@/components/CustomLoader";

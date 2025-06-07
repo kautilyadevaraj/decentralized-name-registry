@@ -4,14 +4,12 @@ import { useState, useEffect } from "react";
 import { useParams, useRouter } from "next/navigation";
 import Link from "next/link";
 import {
-  ExternalLink,
   Copy,
   Check,
   AlertCircle,
   Clock,
   Shield,
   RefreshCw,
-  ArrowRight,
 } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -19,14 +17,8 @@ import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
 } from "@/components/ui/card";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
-import { Skeleton } from "@/components/ui/skeleton";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ethers } from "ethers";
 import { getNameRegistryContract } from "@/lib/contract";
 import {CustomLoader} from "@/components/CustomLoader";

@@ -84,12 +84,15 @@ export function HeroAnimation() {
 
         // Bounce off edges with some padding
         const padding = 50;
+        if(canvas){
           if (this.x <= padding || this.x >= canvas.clientWidth - padding) {
             this.angleSpeed *= -1;
           }
           if (this.y <= padding || this.y >= canvas.clientHeight - padding) {
             this.angleSpeed *= -1;
           }
+        }
+          
         }
       
 

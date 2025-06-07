@@ -19,7 +19,7 @@ export default function AboutPage() {
       <div className="max-w-3xl mx-auto space-y-8">
         <div className="space-y-2">
           <h1 className="text-3xl font-bold tracking-tight gradient-text">
-            About Decentralized Naming Registry
+            About BlockRegistry
           </h1>
           <p className="text-muted-foreground">
             Learn about our mission to create a decentralized identity system
@@ -30,11 +30,11 @@ export default function AboutPage() {
         <div className="space-y-4 bg-card/50 backdrop-blur-sm border border-muted/80 rounded-lg p-6">
           <h2 className="text-2xl font-bold gradient-text">Our Mission</h2>
           <p className="leading-relaxed">
-            The Decentralized Naming Registry (DNR) is a blockchain-based naming
-            system designed to provide users with a secure, permanent, and truly
-            decentralized digital identity. Our mission is to create a naming
-            infrastructure that empowers individuals to own their online
-            presence without relying on centralized authorities.
+            The BlockRegistry is a blockchain-based naming system designed to
+            provide users with a secure, permanent, and truly decentralized
+            digital identity. Our mission is to create a naming infrastructure
+            that empowers individuals to own their online presence without
+            relying on centralized authorities.
           </p>
           <p className="leading-relaxed">
             In the traditional web, domain names are controlled by centralized
@@ -50,8 +50,8 @@ export default function AboutPage() {
           <p className="leading-relaxed">
             DNR uses smart contracts deployed on multiple blockchains to manage
             the registration and ownership of names. When you register a name,
-            you're not just renting it from a central authority—you're claiming
-            true ownership of that name on the blockchain.
+            you&apos;re not just renting it from a central authority—you&apos;re
+            claiming true ownership of that name on the blockchain.
           </p>
           <p className="leading-relaxed">
             Each name can be linked to various records, such as cryptocurrency
@@ -191,7 +191,10 @@ export default function AboutPage() {
           </p>
           <div className="flex justify-center mt-6">
             <Button className="bg-gradient-to-r from-purple to-teal hover:opacity-90 transition-all duration-300">
-              <Link href="https://github.com/kautilyadevaraj/decentralized-name-registry" className="flex items-center">
+              <Link
+                href="https://github.com/kautilyadevaraj/decentralized-name-registry"
+                className="flex items-center"
+              >
                 <Github className="mr-2 h-4 w-4" />
                 Visit GitHub Repository
               </Link>
