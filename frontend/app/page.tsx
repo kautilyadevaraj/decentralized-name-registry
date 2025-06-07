@@ -183,7 +183,7 @@ export default function Home() {
           <p className="text-center text-sm leading-loose text-muted-foreground md:text-left">
             © 2025{" "}
             <span className="gradient-text font-medium">
-              Decentralized Naming Registry
+              BlockRegistry
             </span>
             . All rights reserved.
           </p>

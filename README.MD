@@ -1,4 +1,4 @@
-# Decentralized Naming Registry
+# BlockRegistry
 
 A decentralized naming registry DApp built with **Next.js**, **Tailwind CSS**, **Shadcn UI components**, and **Hardhat** for smart contract development. This project allows users to search for, register, renew, and transfer unique names on the blockchain.
 

@@ -11,6 +11,7 @@ import {
   Wallet,
   Globe,
 } from "lucide-react";
+import Link from "next/link";
 
 export default function AboutPage() {
   return (
@@ -190,8 +191,10 @@ export default function AboutPage() {
           </p>
           <div className="flex justify-center mt-6">
             <Button className="bg-gradient-to-r from-purple to-teal hover:opacity-90 transition-all duration-300">
-              <Github className="mr-2 h-4 w-4" />
-              Visit GitHub Repository
+              <Link href="https://github.com/kautilyadevaraj/decentralized-name-registry" className="flex items-center">
+                <Github className="mr-2 h-4 w-4" />
+                Visit GitHub Repository
+              </Link>
             </Button>
           </div>
         </div>

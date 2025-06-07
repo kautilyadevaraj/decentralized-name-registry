@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -8,6 +9,7 @@ import { Menu, X, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { cn } from "@/lib/utils";
+import Logo from "@/public/logo.png";
 
 export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -40,13 +42,9 @@ export function Navbar() {
       <div className="container flex h-16 items-center justify-between">
         <div className="flex items-center gap-2">
           <Link href="/" className="flex items-center gap-2 group">
-            <div className="h-9 w-9 rounded-full bg-gradient-to-r from-purple to-teal flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
-              <span className="text-primary-foreground font-bold text-lg">
-                D
-              </span>
-            </div>
+            <Image src={Logo} alt="logo" className="h-13 w-13"></Image>
             <span className="hidden font-bold sm:inline-block group-hover:gradient-text transition-colors duration-300">
-              Decentralized Naming Registry
+              BlockRegistry
             </span>
             <span className="font-bold sm:hidden group-hover:gradient-text transition-colors duration-300">
               DNR
